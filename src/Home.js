@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 import concept from "./fire_level1_concept.png"
 import logo from "./Elemental_logo.png"
+import { mintNFT } from './utils/interact.js'
 
 function Home(){
     return(
@@ -21,7 +22,7 @@ function Home(){
                     <span class="ml-2 text-xl font-sans font-bold tracking-wide text-gray-100">Elemental</span>
                 </a>
                 <ul class="flex items-center hidden space-x-8 lg:flex">
-                    <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-teal-accent-400">Mint</a></li>
+                    <li><button onClick={() => mintNFT(1)} aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-teal-accent-400">Mint</button></li>
                     <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-teal-accent-400">My Collection</a></li>
                 </ul>
 

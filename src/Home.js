@@ -16,7 +16,7 @@ function Home(){
                     </div>
 
                     <h2 class="max-w-lg mb-6 font-sans text-xl font-bold tracking-tight text-gray-400 sm:text-lg sm:leading-none">
-                    [The race begins October 25th]<br class="hidden md:block" />
+                    The race begins October 25th<br class="hidden md:block" />
 
                     </h2>
                     <p class="text-base font-sans text-gray-600 md:text-lg mb-10 mt-10">
@@ -26,15 +26,15 @@ function Home(){
                 <div class="flex flex-col items-center content-center justify-around md:flex-row">
                     <a
                     href="/"
-                    class="inline-flex items-center content-center justify-center w-full h-12 px-6 mb-3 font-sans tracking-wide text-white"
+                    class="bg-gray-700 rounded-md mr-5 inline-flex items-center content-center justify-center w-full h-12 px-6 mb-3 font-sans tracking-wide text-white"
                     >
-                    [Connect Metamask]
+                    Connect Metamask
                     </a>
                     <a
                     href="/"
-                    class="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-sans tracking-wide text-white"
+                    class="bg-gray-300 rounded-md ml-5 inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-sans tracking-wide text-black"
                     >
-                    [Learn More]
+                    Learn More
                     </a>
 
                 </div>
@@ -50,6 +50,85 @@ function Home(){
             </div>
 
 
+            <div class="bg-black px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+
+                    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-300 sm:text-4xl md:mx-auto">
+                    How to Win
+                    </h2>
+                    <p class="text-base text-gray-600 md:text-lg">
+                    Win by minting the ultimate forms of either of the four elements: The fire god, the wind god, the water god, and the earth god.
+                    </p>
+                </div>
+                <div class="grid max-w-screen-lg gap-8 row-gap-10 mx-auto lg:grid-cols-2">
+                    <div class="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+                    <div class="mr-4">
+                        <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                        <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h6 class="text-white mb-3 text-md font-sans leading-5">THE FIRE GOD</h6>
+                        <p class="mb-3 text-sm text-gray-600 font-sans">
+                        The fire god can be minted after acquiring one of each of the five levels of the fire wielders: a fire ghoul, a fire slayer, a junior hades, a death feeler, and an underworld ruler.
+                        </p>
+                        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+                    </div>
+                    </div>
+                    <div class="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+                    <div class="mr-4">
+                        <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                        <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h6 class="text-white mb-3 text-md font-sans leading-5">THE WIND GOD</h6>
+                        <p class="mb-3 text-sm text-gray-600 font-sans">
+                        Rough pomfret lemon shark plownose chimaera southern sandfish kokanee northern sea robin Antarctic cod. Yellow-and-black triplefin gulper South American Lungfish mahi-mahi, butterflyfish glass catfish soapfish ling gray mullet!
+                        </p>
+                        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+                    </div>
+                    </div>
+                    <div class="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+                    <div class="mr-4">
+                        <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                        <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h6 class="text-white mb-3 text-md font-sans leading-5">THE WATER GOD</h6>
+                        <p class="mb-3 text-sm text-gray-600 font-sans">
+                        A slice of heaven. O for awesome, this chocka full cuzzie is as rip-off as a cracker. Meanwhile, in behind the bicycle shed, Hercules Morse, as big as a horse and Mrs Falani were up to no good with a bunch of crook pikelets.
+                        </p>
+                        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+                    </div>
+                    </div>
+                    <div class="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+                    <div class="mr-4">
+                        <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                        <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h6 class="text-white mb-3 text-md font-sans leading-5">THE EARTH GOD</h6>
+                        <p class="mb-3 text-sm text-gray-600 font-sans">
+                        Disrupt inspire and think tank, social entrepreneur but preliminary thinking think tank compelling. Inspiring, invest synergy capacity building, white paper; silo, unprecedented challenge B-corp problem-solvers.
+                        </p>
+                        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+            
 
             <div class="bg-black px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div class="bg-black max-w-xl mb-20 md:mx-auto sm:text-center lg:max-w-2xl md:mt-15">

@@ -5,34 +5,113 @@ function Home(){
     return(
     <div className="App">
         
+
+        <div class="bg-black">
+            <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+                <div class="relative flex items-center justify-between">
+                <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+                    <svg class="w-8 text-teal-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
+                    <rect x="3" y="1" width="7" height="12"></rect>
+                    <rect x="3" y="17" width="7" height="6"></rect>
+                    <rect x="14" y="1" width="7" height="6"></rect>
+                    <rect x="14" y="11" width="7" height="12"></rect>
+                    </svg>
+                    <span class="ml-2 text-xl font-sans font-bold tracking-wide text-gray-100">Elemental</span>
+                </a>
+                <ul class="flex items-center hidden space-x-8 lg:flex">
+                    <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-teal-accent-400">Mint</a></li>
+                    <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-teal-accent-400">My Collection</a></li>
+                </ul>
+
+                <div class="lg:hidden">
+                    <button aria-label="Open Menu" title="Open Menu" class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline">
+                    <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
+                        <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"></path>
+                        <path fill="currentColor" d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"></path>
+                    </svg>
+                    </button>
+
+                    <div class="absolute top-0 left-0 w-full">
+                    <div class="p-5 bg-white border rounded shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+                            <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
+                                <rect x="3" y="1" width="7" height="12"></rect>
+                                <rect x="3" y="17" width="7" height="6"></rect>
+                                <rect x="14" y="1" width="7" height="6"></rect>
+                                <rect x="14" y="11" width="7" height="12"></rect>
+                            </svg>
+                            <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Company</span>
+                            </a>
+                        </div>
+                        <div>
+                            <button aria-label="Close Menu" title="Close Menu" class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                            <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                                <path
+                                fill="currentColor"
+                                d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
+                                ></path>
+                            </svg>
+                            </button>
+                        </div>
+                        </div>
+                        <nav>
+                        <ul class="space-y-4">
+                            <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Product</a></li>
+                            <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Features</a></li>
+                            <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Pricing</a></li>
+                            <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">About us</a></li>
+                            <li>
+                            <a
+                                href="/"
+                                class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                aria-label="Sign up"
+                                title="Sign up"
+                            >
+                                Sign up
+                            </a>
+                            </li>
+                        </ul>
+                        </nav>
+                    </div>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+            </div>
+
+
         <div class="relative flex flex-col bg-black py-16 lg:pt-0 lg:flex-col lg:pb-0">
             <div class="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
                 <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
                 <div class="max-w-xl mb-6">
-                    <div>
-                    <h1 class="inline-block px-3 py-px mb-10 text-3xl font-bold font-sans tracking-wider text-gray-300 rounded-full bg-teal-gray-300">
-                        Elemental
-                    </h1>
-                    </div>
 
-                    <h2 class="max-w-lg mb-6 font-sans text-xl font-bold tracking-tight text-gray-400 sm:text-lg sm:leading-none">
-                    The race begins October 25th<br class="hidden md:block" />
-
-                    </h2>
                     <p class="text-base font-sans text-gray-600 md:text-lg mb-10 mt-10">
-                    243 years ago, the elements were scattered across the universe. It is up to you to harness the power of all the elements and craft the almighty!
+                    Elemental is an NFT collection race. Players will race to mint the gods of the elements to take home
+                    the ultimate prize: the entire contract pot!
                     </p>
                 </div>
-                <div class="flex flex-col items-center content-center justify-around md:flex-row">
+                
+                <div class="max-w-xl mb-6">
+
+                    <p class="text-base font-sans text-gray-400 md:text-lg mb-10 mt-10">
+                    Minting begins October 25th
+                    </p>
+                </div>
+                
+                <div class="flex flex-col items-center content-center justify-between md:flex-row">
                     <a
                     href="/"
-                    class="bg-gray-700 rounded-md mr-5 inline-flex items-center content-center justify-center w-full h-12 px-6 mb-3 font-sans tracking-wide text-white"
+                    class="bg-gray-700 rounded-md inline-flex items-center content-center justify-center w-full h-12 px-5 m-3 font-sans tracking-wide text-white"
                     >
                     Connect Metamask
                     </a>
                     <a
                     href="/"
-                    class="bg-gray-300 rounded-md ml-5 inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-sans tracking-wide text-black"
+                    class="bg-gray-300 rounded-md inline-flex items-center justify-center w-full h-12 px-5 m-3 font-sans tracking-wide text-black"
                     >
                     Learn More
                     </a>

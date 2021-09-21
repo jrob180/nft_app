@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import { Link, BrowserRouter, Route, Switch } from 'react-router-dom';
+import concept from "./fire_level1_concept.png"
+import logo from "./Elemental_logo.png"
 
 function Home(){
     return(
@@ -87,10 +89,11 @@ function Home(){
         <div class="relative flex flex-col bg-black py-16 lg:pt-0 lg:flex-col lg:pb-0">
             <div class="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
                 <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
-
+                {/*
+                <img src = {logo} class = "scale-10"></img>
+                */}
                 <div class="max-w-xl mb-6">
-
-                    <p class="text-base font-sans text-gray-600 md:text-lg mb-10 mt-10">
+                    <p class="text-base font-sans text-gray-400 md:text-lg mb-10 mt-10">
                     Elemental is an NFT collection race. Players will race to mint the gods of the elements to take home
                     the ultimate prize: the entire contract pot!
                     </p>
@@ -98,7 +101,7 @@ function Home(){
                 
                 <div class="max-w-xl mb-6">
 
-                    <p class="text-base font-sans text-gray-400 md:text-lg mb-10 mt-10">
+                    <p class="text-base font-sans text-gray-500 md:text-lg mb-10 mt-10">
                     Minting begins October 25th
                     </p>
                 </div>
@@ -120,20 +123,24 @@ function Home(){
                 </div>
                 </div>
             </div>
+
+            
             <div class="inset-y-0 right-0 w-full max-w-xl px-4 mx-auto lg:pl-8 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-1/2 lg:max-w-full lg:absolute xl:px-0">
                 <img
                 class="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none sm:h-96 lg:h-full"
-                src="https://cdna.artstation.com/p/marketplace/presentation_assets/000/968/606/large/file.jpg?1622646495"
+                src= {concept}
                 alt=""
                 />
             </div>
+            
+
             </div>
 
 
             <div class="bg-black px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
 
-                    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-300 sm:text-4xl md:mx-auto">
+                    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
                     How to Win
                     </h2>
                     <p class="text-base text-gray-600 md:text-lg">

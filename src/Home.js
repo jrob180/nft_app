@@ -87,6 +87,7 @@ function Home(){
         <div class="relative flex flex-col bg-black py-16 lg:pt-0 lg:flex-col lg:pb-0">
             <div class="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
                 <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
+
                 <div class="max-w-xl mb-6">
 
                     <p class="text-base font-sans text-gray-600 md:text-lg mb-10 mt-10">
@@ -207,7 +208,83 @@ function Home(){
                 </div>
                 </div>
 
-            
+
+                <div class="bg-black px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                    <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+                        <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+
+                        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+                            FAQ
+                        </h2>
+                        <p class="text-base text-gray-500 md:text-lg">
+                            To answer some of your questions.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="max-w-screen-xl sm:mx-auto">
+                        <div class="grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-2">
+                        <div class="space-y-8">
+                            <div>
+                            <p class="text-white self-start mb-4 text-xl font-medium">
+                                How do I mint a character?
+                            </p>
+                            <p class="text-gray-500">
+                                Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.<br />
+                                <br />
+                                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                            </p>
+                            </div>
+                            <div>
+                            <p class="text-white mb-4 text-xl font-medium">
+                                How many characters can I mint?
+                            </p>
+                            <p class="text-gray-500">
+                                Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.<br />
+                                <br />
+                                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                            </p>
+                            </div>
+                            <div>
+                            <p class="text-white mb-4 text-xl font-medium">Is the Space Pope reptilian!?</p>
+                            <p class="text-gray-500">
+                                A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.
+                            </p>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <div>
+                            <p class="text-white mb-4 text-xl font-medium">How much money you got on you?</p>
+                            <p class="text-gray-500">
+                                Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.<br />
+                                <br />
+                                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                            </p>
+                            </div>
+                            <div>
+                            <p class="text-white mb-4 text-xl font-medium">
+                                Galaxies Orion's sword globular star cluster?
+                            </p>
+                            <p class="text-gray-500">
+                                Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.<br />
+                                <br />
+                                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                            </p>
+                            </div>
+                            <div>
+                            <p class="text-white mb-4 text-xl font-medium">
+                                When has justice ever been as simple as a rule book?
+                            </p>
+                            <p class="text-gray-500">
+                                Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.<br />
+                                <br />
+                                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                            </p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
 
             <div class="bg-black px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div class="bg-black max-w-xl mb-20 md:mx-auto sm:text-center lg:max-w-2xl md:mt-15">

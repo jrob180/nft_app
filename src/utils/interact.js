@@ -8,7 +8,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3('https://eth-rinkeby.alchemyapi.io/v2/FY0T2dV3V8QfMTodd7Lmmt2eBeXMcwEx') 
 
 const contract = require("../contract-abi.json"); 
-const contractAddress =  "0xA900004B59B4874385A59C7AB7A1aaE35AE6B6Fa";
+const contractAddress =  "0xcAD86c8Cb1922BFFD0A34744f7693E6F90abC07E";
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
 export const getCurrentWalletConnected = async () => {
@@ -136,7 +136,7 @@ export const payDuel = async(props) => {
 export const mintNFT = async(props) => {
     const count = props;
     const gas = parseInt(count)*50000;
-    const cost = parseInt(count)*.1;
+    const cost = parseInt(count)*.0008;
     const transactionParameters = {
       'from': window.ethereum.selectedAddress,
       'to': contractAddress,
@@ -161,7 +161,55 @@ export const mintNFT = async(props) => {
     }
 
   }
+  export const mintGod = async(props) => {
+    const transactionParameters = {
+      'from': window.ethereum.selectedAddress,
+      'to': contractAddress,
+      'nonce': '0x00',
+      'gas': '50000',
+      'data': nftContract.methods.mintGod(props).encodeABI()
+    };
+    try {
+      await window.ethereum
+          .request({
+              method: 'eth_sendTransaction',
+              params: [transactionParameters],
+          });
+      return {
+          success: true,
+      }
+    } catch (error) {
+        return {
+            success: false,
+        }
+    }
 
+  }
+  
+  export const mintAvatar= async() => {
+    const transactionParameters = {
+      'from': window.ethereum.selectedAddress,
+      'to': contractAddress,
+      'nonce': '0x00',
+      'gas': '50000',
+      'data': nftContract.methods.mintAvatar().encodeABI()
+    };
+    try {
+      await window.ethereum
+          .request({
+              method: 'eth_sendTransaction',
+              params: [transactionParameters],
+          });
+      return {
+          success: true,
+      }
+    } catch (error) {
+        return {
+            success: false,
+        }
+    }
+
+  }
   export const withdraw = async() => {
     const transactionParameters = {
       'from': window.ethereum.selectedAddress,

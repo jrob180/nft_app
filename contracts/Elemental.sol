@@ -10,82 +10,80 @@ contract Elemental is ERC721Enumerable, Ownable {
 
   using SafeMath for uint256;
 
-  uint16[] mannys;
+  uint16[] elementals;
   bool public mintActive = true;
-  bool public goldMannyMinted = false;
+  bool public godOfWater = false;
+  bool public godOfFire = false; 
+  bool public godOfEarth = false;
+  bool public godOfAir = false;
+  bool public avatar = false;
   bool public gameWon = false;
-  uint256 public gameStart;
+ 
   address public gameWinner;
 
   mapping(address => uint) public claimedPerWallet;
-  uint256 public constant price = 0.1 ether;
+  uint256 public constant price = 0.0008 ether;
 
-  address public constant mannyWallet = 0x09B0574EEE786d945a7B33C675B943f1f8b4aD64;
-  address public constant vaultWallet = 0x09B0574EEE786d945a7B33C675B943f1f8b4aD64;
+  address public constant dev1Wallet = 0x09B0574EEE786d945a7B33C675B943f1f8b4aD64;
+  address public constant dev2Wallet = 0x09B0574EEE786d945a7B33C675B943f1f8b4aD64;
+  address public constant dev3Wallet = 0x09B0574EEE786d945a7B33C675B943f1f8b4aD64;
+  address public constant prizeWallet = 0x09B0574EEE786d945a7B33C675B943f1f8b4aD64;
 
   string public baseTokenURI;
 
   constructor()
   ERC721("Elemental", "ELEM") {
-    gameStart = block.timestamp;
 
-    setBaseURI('https://contend-123.uc.r.appspot.com/api/creature/');
+    setBaseURI('https://RegularAnguishedFonts.riftsmurfssuppo.repl.co/api/elemental/');
 
     
-    // token 404 is reserved for game winner so skip it
-    for(uint16 i = 1; i <= 1616; i++) {
-      if (i != 404) {
-        mannys.push(i);
+    for(uint16 i = 1; i <= 6000; i++) {
+      if (i != 0 && i != 1 && i != 1501 && i != 3001 && i != 4501) {
+        elementals.push(i);
       }
     }
 
-    // mint token 1 to mannys wallet
-    mannys[0] = mannys[mannys.length - 1];
-    mannys.pop();
-    _safeMint(mannyWallet, 1);
-
-    // mint 1 of each token type to vault wallet
-    mannys[201] = mannys[mannys.length - 1]; // base rare
-    mannys.pop();
-    _safeMint(vaultWallet, 202);
-    mannys[400] = mannys[mannys.length - 1]; // albino
-    mannys.pop();
-    _safeMint(vaultWallet, 401);
-    mannys[41] = mannys[mannys.length - 1]; // holo
-    mannys.pop();
-    _safeMint(vaultWallet, 42);
-    mannys[143] = mannys[mannys.length - 1]; // inverted
-    mannys.pop();
-    _safeMint(vaultWallet, 144);
-    mannys[65] = mannys[mannys.length - 1]; // silver
-    mannys.pop();
-    _safeMint(vaultWallet, 66);
-    mannys[243] = mannys[mannys.length - 1]; // stone
-    mannys.pop();
-    _safeMint(vaultWallet, 244);
-    mannys[254] = mannys[mannys.length - 1]; // zombie
-    mannys.pop();
-    _safeMint(vaultWallet, 255);
+    _safeMint(dev1Wallet, 500);
+    _safeMint(dev1Wallet, 1000);
+    _safeMint(dev1Wallet, 1300);
+    _safeMint(dev1Wallet, 1450);
+    _safeMint(dev1Wallet, 1499);
+    _safeMint(dev1Wallet, 2000);
+    _safeMint(dev1Wallet, 2500);
+    _safeMint(dev1Wallet, 2800);
+    _safeMint(dev1Wallet, 2950);
+    _safeMint(dev1Wallet, 2999);
+    _safeMint(dev1Wallet, 3500);
+    _safeMint(dev1Wallet, 4000);
+    _safeMint(dev1Wallet, 4300);
+    _safeMint(dev1Wallet, 4450);
+    _safeMint(dev1Wallet, 4499);
+    _safeMint(dev1Wallet, 5000);
+    _safeMint(dev1Wallet, 5500);
+    _safeMint(dev1Wallet, 5800);
+    _safeMint(dev1Wallet, 5950);
+    _safeMint(dev1Wallet, 5999);
   }
 
   function mint(uint numberOfTokens) public payable {
-    require(mintActive == true, "mint is not active rn..");
-    require(tx.origin == msg.sender, "dont get Seven'd");
-    require(numberOfTokens > 0, "mint more lol");
-    require(numberOfTokens <= 16, "dont be greedy smh");
-    require(numberOfTokens <= mannys.length, "no more tokens sry");
-    require(claimedPerWallet[msg.sender] + numberOfTokens <= 64, "claimed too many");
-    require(msg.value >= price.mul(numberOfTokens), "more eth pls");
+    require(mintActive == true, "mint not active");
+    require(tx.origin == msg.sender, "nahhh");
+    require(numberOfTokens > 0, "don't be poor");
+    require(numberOfTokens <= 100, "holy fuck");
+    require(numberOfTokens <= elementals.length, "we out baby");
+    require(claimedPerWallet[msg.sender] + numberOfTokens <= 64, "sorry no more for you");
+    require(msg.value >= price.mul(numberOfTokens), "get more eth bruh");
 
-    // mint a random manny
     for (uint i = 0; i < numberOfTokens; i++) {
-      uint256 randManny = getRandom(mannys);
-      _safeMint(msg.sender, randManny);
+      uint256 mintingData = getRandom(elementals);
+      _safeMint(msg.sender, mintingData);
       claimedPerWallet[msg.sender] += 1;
     }
 
-    uint mannyCut = msg.value * 40 / 100;
-    payable(mannyWallet).transfer(mannyCut);
+    uint devCut = msg.value * 15 / 100;
+    payable(dev1Wallet).transfer(devCut);
+    payable(dev2Wallet).transfer(devCut);
+    payable(dev3Wallet).transfer(devCut);
   }
 
   function getRandom(uint16[] storage _arr) private returns (uint256) {
@@ -132,48 +130,36 @@ contract Elemental is ERC721Enumerable, Ownable {
     }
   }
 
-  function mintGoldManny() public {
-    require(goldMannyMinted == false, "golden manny already minted...");
-    uint16[5] memory zombie = [13, 143, 180, 255, 363];
-    uint16[16] memory inverted = [10, 17, 44, 60, 64, 77, 78, 144, 155, 165, 168, 216, 219, 298, 329, 397];
-    uint16[16] memory silver = [7, 24, 66, 76, 85, 127, 148, 167, 172, 186, 210, 287, 303, 304, 348, 396];
-    uint16[16] memory stone = [11, 33, 36, 58, 108, 138, 171, 173, 184, 190, 209, 231, 234, 244, 308, 332];
-    uint16[24] memory albinos = [59, 91, 93, 94, 115, 118, 119, 141, 145, 150, 160, 179, 192, 195, 235, 
-      237, 271, 273, 291, 297, 325, 326, 381, 401];
-    uint16[24] memory holos = [42, 90, 92, 98, 122, 124, 132, 156, 162, 182, 197, 206, 240, 242, 253, 
-      306, 335, 341, 351, 382, 387, 390, 391, 399];
+  function mintGod(uint stagger) public {
+    if(stagger == 0){
+        require(godOfWater == false, "The God Of Water has already been claimed");
+    } else if(stagger == 1500){
+        require(godOfFire == false, "The God Of Fire has already been claimed");
+    } else if(stagger == 3000){
+        require(godOfEarth == false, "The God Of Water has already been claimed");
+    } else if (stagger == 4500){
+        require(godOfAir == false, "The God Of Air has already been claimed");
+    }
 
     uint16[] memory tokensOwned = this.tokensByOwner(msg.sender);
     uint16[] memory points = new uint16[](7);
 
     for (uint16 k = 0; k < tokensOwned.length; k++) {
-      uint16 token = tokensOwned[k];
-      bool isBase = token <= 403;
-      for (uint16 i = 0; i < 24; i++) {
-        if (i < albinos.length && albinos[i] == token) {
-          points[1] = 1;
-          isBase = false;
-        } else if (i < holos.length && holos[i] == token) {
-          points[2] = 1;
-          isBase = false;
-        } else if (i < inverted.length && inverted[i] == token) {
-          points[3] = 1;
-          isBase = false;
-        } else if (i < silver.length && silver[i] == token) {
-          points[4] = 1;
-          isBase = false;
-        } else if (i < stone.length && stone[i] == token) {
-          points[5] = 1;
-          isBase = false;
-        } else if (i < zombie.length && zombie[i] == token) {
-          points[6] = 1;
-          isBase = false;
+        uint16 token = tokensOwned[k];
+        if(token <= stagger){
+            //wrong element
         }
-      }
-      // if checked all special ids and none matched, add base point
-      if (isBase) {
-        points[0] = 1;
-      }
+        else if (token <= stagger + 751) {
+          points[0] = 1;
+        } else if (token <= stagger + 1201) {
+          points[1] = 1;
+        } else if (token <= stagger + 1426) {
+          points[2] = 1;
+        } else if (token <= stagger + 1496) {
+          points[3] = 1;
+        } else if (token <= stagger + 1500) {
+          points[4] = 1;
+        }
     }
 
     uint16 totalPoints;
@@ -183,14 +169,61 @@ contract Elemental is ERC721Enumerable, Ownable {
       }
     }
 
-    require(totalPoints >= 7, "not enough points for a golden manny, ngmi...");
-    _safeMint(msg.sender, 404);
-    goldMannyMinted = true;
+    require(totalPoints >= 5, "You do not have the required Elementals to mint a God");
+
+    if(stagger == 0){
+        _safeMint(msg.sender, 1);
+        godOfWater = true;
+    } else if(stagger == 1500){
+        _safeMint(msg.sender, 1501);
+        godOfFire = true;
+    } else if(stagger == 3000){
+        _safeMint(msg.sender, 3001);
+        godOfEarth = true;
+    } else if (stagger == 4500){
+        _safeMint(msg.sender, 4501);
+        godOfAir = true;
+    }
+  }
+
+  function mintAvatar() public {
+    require(avatar == false, "The Avatar has already been claimed");
+    uint256 godOfWaterId = 1;
+    uint256 godOfFireId = 1501;
+    uint256 godOfEarthId = 3001;
+    uint256 godOfAirId = 4501;
+
+    uint16[] memory tokensOwned = this.tokensByOwner(msg.sender);
+    uint16[] memory points = new uint16[](7);
+
+    for (uint16 k = 0; k < tokensOwned.length; k++) {
+        uint16 token = tokensOwned[k];
+        if (godOfWaterId == token) {
+          points[0] = 1;
+        } else if (godOfFireId == token) {
+          points[1] = 1;
+        } else if (godOfEarthId == token) {
+          points[2] = 1;
+        } else if (godOfAirId == token) {
+          points[3] = 1;
+        }
+    }
+
+    uint16 totalPoints;
+    for (uint16 j = 0; j < points.length; j++) {
+      if (points[j] == 1) {
+        totalPoints += 1;
+      }
+    }
+    
+    require(totalPoints >= 4, "You do not have the required elementals to mint the Avatar.");
+    _safeMint(msg.sender, 0);
+    avatar = true;
   }
 
   function winTheGame() public {
-    require(gameWon == false, "game has already been won, gg");
-    require(this.ownerOf(404) == msg.sender, "have not acquired the golden manny, smh...");
+    require(gameWon == false, "The game is already over");
+    require(this.ownerOf(0) == msg.sender, "You have not acquired the Avatar");
     payable(msg.sender).transfer(address(this).balance);
     gameWon = true;
     gameWinner = msg.sender;
@@ -210,12 +243,6 @@ contract Elemental is ERC721Enumerable, Ownable {
   }
 
   function withdraw() public onlyOwner {
-    uint256 days404 = 86400 * 404;
-    // time hasnt expired, so enforce rules
-    if (block.timestamp <= gameStart + days404) {
-      require(gameWon == true, "game isnt over yet...");
-    }
-
     uint256 balance = address(this).balance;
     payable(msg.sender).transfer(balance);
 
